@@ -1,12 +1,10 @@
 
 from django.urls import path
-
-
-from courses.views import courses, home
+from . import views
 
 
 urlpatterns = [
-    path('', home),
-    path('home', home),
-    path('course_list',courses),
+    path('', views.home),
+    path('home', views.home),
+    path('course_list',views.courses),
 ]
