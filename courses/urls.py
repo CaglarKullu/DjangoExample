@@ -4,7 +4,11 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.home),
-    path('home', views.home),
-    path('course_list',views.courses),
+    path('', views.courses),
+    path('list',views.courses),
+    path('<course_name>',views.details),
+    path('cagetories/category<int:category_id>',views.getCoursesByCategoryId),
+    path('cagetories/<str:category_name>',views.getCoursesByCategory),
+
+ 
 ]
